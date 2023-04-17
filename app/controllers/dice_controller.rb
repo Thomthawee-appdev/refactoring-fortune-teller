@@ -179,4 +179,13 @@ class DiceController < ApplicationController
 
     render({:template => "dice_templates/three_twenty.html.erb"})
   end
+  
+  def infinity_and_beyond
+    @num_dice = params.fetch("number_of_dice")
+    @num_faces = params.fetch("how_many_sides")
+
+    render({:template => "dice_templates/infinity.html.erb"})
+  end
+
+
 end
